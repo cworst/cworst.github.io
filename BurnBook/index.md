@@ -7,3 +7,7 @@ I am learning how to write in here for the first time
 * shes real
 * I like her style
 * she is my inner thoughts as a character
+
+## Here is something you may or may not want to see
+
+- [You can click here!](BurnBook)

@@ -1,0 +1,114 @@
+Last login: Fri Sep 13 12:10:01 on ttys000
+1016470@1016470-student-FVFMR50J1WFV ~ % ls
+Applications		Library			Public
+Desktop			Movies			cworst.github.io
+Documents		Music
+Downloads		Pictures
+1016470@1016470-student-FVFMR50J1WFV ~ % cd desktop
+1016470@1016470-student-FVFMR50J1WFV desktop % cd website
+1016470@1016470-student-FVFMR50J1WFV website % mkdir BurnBook
+1016470@1016470-student-FVFMR50J1WFV website % cd BurnBook
+1016470@1016470-student-FVFMR50J1WFV BurnBook % ls
+1016470@1016470-student-FVFMR50J1WFV BurnBook % vim index.md
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git add index.md
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git commit -m "My burnbook"
+[main 4fdf003] My burnbook
+ 1 file changed, 9 insertions(+)
+ create mode 100644 BurnBook/index.md
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 498 bytes | 498.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:cworst/cworst.github.io.git
+   98e0da1..4fdf003  main -> main
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+	../Preview attachment quiz 9-9quiz 9-95.3 KB.webloc
+	../how I made my website
+	../how to add stuff to website with errors
+	../how to edit website using vim less mistakes
+	../quiz/
+
+nothing added to commit but untracked files present (use "git add" to track)
+1016470@1016470-student-FVFMR50J1WFV BurnBook % vim MyIntrests.md
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+	MyIntrests.md
+	../Preview attachment quiz 9-9quiz 9-95.3 KB.webloc
+	../how I made my website
+	../how to add stuff to website with errors
+	../how to edit website using vim less mistakes
+	../quiz/
+
+nothing added to commit but untracked files present (use "git add" to track)
+1016470@1016470-student-FVFMR50J1WFV BurnBook % vim index.md
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+	MyIntrests.md
+	../Preview attachment quiz 9-9quiz 9-95.3 KB.webloc
+	../how I made my website
+	../how to add stuff to website with errors
+	../how to edit website using vim less mistakes
+	../quiz/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git add index.html
+fatal: pathspec 'index.html' did not match any files
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git add index.md
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git commit -m "journal link maybe?"
+[main 8ea6443] journal link maybe?
+ 1 file changed, 4 insertions(+)
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 485 bytes | 485.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:cworst/cworst.github.io.git
+   4fdf003..8ea6443  main -> main
+1016470@1016470-student-FVFMR50J1WFV BurnBook % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+	MyIntrests.md
+	../Preview attachment quiz 9-9quiz 9-95.3 KB.webloc
+	../how I made my website
+	../how to add stuff to website with errors
+	../how to edit website using vim less mistakes
+	../quiz/
+
+nothing added to commit but untracked files present (use "git add" to track)
+1016470@1016470-student-FVFMR50J1WFV BurnBook % 

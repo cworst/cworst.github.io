@@ -2,6 +2,8 @@
 ### Why I like her
 
 * She is so me
+* I really like her character traits
+* She is my thoughts and personality if I were better
 
 ## Owls
 ### Why I like them

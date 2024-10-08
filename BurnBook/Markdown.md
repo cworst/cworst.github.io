@@ -13,7 +13,7 @@ Lucy Van Pelt <3
 
 ## My Favorite Charlie Brown Characters!
 
-|Name |Why|
-|Lucy |She is so iconic |
-|Snoopy |Hes a classic |
-|Linus |Hes Lucy's younger sibling and I am a younger sibling so I relate |
+|Name  |Why                                                              |
+|Lucy  |She is so iconic                                                 |
+|Snoopy|Hes a classic                                                    |
+|Linus |Hes Lucy's younger sibling and I am a younger sibling so I relate|

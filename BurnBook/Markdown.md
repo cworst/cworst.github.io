@@ -11,3 +11,9 @@ Lucy Van Pelt <3
  
 ![This is cute](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mlZii-I72-phz022YoM8j3aGoHWCJspzGa6SEvdkPkd1Xflw:https://static.wikia.nocookie.net/fiction-wrestling-multiverse/images/0/06/Lucy_van_pelt_tshirt.jpeg/revision/latest%3Fcb%3D20140302055355&s)
 
+## My Favorite Charlie Brown Characters!
+
+|Names|Why|
+|Lucy|She is so iconic|
+|Snoopy|Hes a classic|
+|Linus|Hes Lucy's younger sibling and I am a younger sibling so I relate|

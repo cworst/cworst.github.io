@@ -1,5 +1,4 @@
 ## Cell Theory!
-![Markdown logo](https://www.sciencefacts.net/wp-content/uploads/2023/07/Cell-Theory.jpg)
 
 
 # Cell theory is:
@@ -25,7 +24,7 @@ Spontaneous Generation was disproven with Francesco Redi's experiment in 1668. H
 
 Lots of people thought that the maggots wouldnt appear due to lack of oxygen, so in 1859, a man named Louis Pasteur disproved Spontaneous Generation fully. He had a flash with a very tiny opening, enough to let air in, but too small and weirdly shaped for bacteria to get into the liquid, aka chicken broth.
 
-![Markdown logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCLEKJny2tX_Kyz66hxweyk1_aWvlVaRYSPNMLgqlVrxuRE08t:https://www.pasteurbrewing.com/wp-content/uploads/pasteur-experiment-310x165.jpg&s)
+
 The little dip at the opening would trap the bacteria there so the broth would remain untouched.
 
 For many days the broth stayed fresh, but after breaking the flask the broth spoiled after a few days with the bacteria being able to reach it.

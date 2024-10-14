@@ -10,6 +10,8 @@
 
 # There are many people who contributed to Cell Theory and helped come up with the three 'rules' or components that make up the Cell theory. These people are;
 
+| Person | Discovery |
+| ------ | -------- |
 | Robert Hooke | First to discover cells by looking at a tree cork. |
 | Anthony van Leeuwenhoek | First to observe live protists from lakes, and bacteria from his plaque on his teeth. |
 | Matthias Schleiden | Found out all plants are made up of cells. He also worked with Theodor Schwann and used discoveries made by past scientists to come up with the first two parts of cell theory! |

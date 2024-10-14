@@ -14,4 +14,4 @@ I am learning how to write in here for the first time
 
 ## This is my homework for 10/8
 
-- [Homework](homeworkfor08.md)
+- [Homework](entries/homeworkfor08.md)

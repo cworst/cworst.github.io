@@ -11,3 +11,7 @@ I am learning how to write in here for the first time
 ## Here is something you may or may not want to see
 
 - [You can click here!](MyIntrests.md)
+
+## This is my journal entry for 10/8!
+
+[Homework](homeworkfor08.md)

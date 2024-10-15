@@ -15,3 +15,7 @@ I am learning how to write in here for the first time
 ## This is my journal entry for 10/8!
 
 - [Homework](entries/homeworkfor08.md)
+
+## This is my journal entry for 10/15!
+
+- [Homework](entries/homeworkfor08.md)

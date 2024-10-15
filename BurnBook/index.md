@@ -18,4 +18,4 @@ I am learning how to write in here for the first time
 
 ## This is my journal entry for 10/15!
 
-- [Homework](entries/homeworkfor08.md)
+- [Homework](entries/homeworkfor1015.md)

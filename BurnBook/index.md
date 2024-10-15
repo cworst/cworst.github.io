@@ -12,6 +12,12 @@ I am learning how to write in here for the first time
 
 - [You can click here!](MyIntrests.md)
 
+<<<<<<< HEAD
 ## This is my journal entry for 10/8!
 
 [Homework](homeworkfor08.md)
+=======
+## This is my homework for 10/8
+
+- [Homework](entries/homeworkfor08.md)
+>>>>>>> refs/remotes/origin/main

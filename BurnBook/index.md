@@ -19,3 +19,9 @@ I am learning how to write in here for the first time
 ## This is my journal entry for 10/15!
 
 - [Homework](entries/homeworkfor1015.md)
+
+## This is my project 
+- [Project](https://busy412.wordpress.com/)
+
+# Reflection for Project
+- [Reflection](entries/ProjectReflection.md)

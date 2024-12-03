@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <title>Animal Exhibits</title>
     <script src="../js/init.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body style="background-color: DarkSeaGreen;">
+<body>
     <header>
         <h1>Explore Our Animal Exhibits</h1>
         <p>Meet the amazing animals that call our zoo home!</p>
+<img src="../images/owlmid.jpg"
+alt="cookie"
+srcset="../images/owltiny.jpg 480w,
+    ../images/owlmid.jpg 800w,
+    ../images/owlhuge.jpg 1200w"
+sizes="(max-width: 480px) 95vw,
+    (max-width: 800px) 45vw,
+    30vw">
     </header>
     <nav>
         <ul>
-            <li style="background-color: Pink;"><a href="index.html">Home</a></li>
-            <li style="background-color: Pink;"><a href="animals.html">Animals</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Animals</a></li>
         </ul>
     </nav>
     <main>
@@ -24,26 +33,26 @@
                 <caption>Featured Exhibits</caption>
                 <thead>
                     <tr>
-                        <th style="border:1px solid">Exhibit</th>
-                        <th style="border:1px solid">Region</th>
-                        <th style="border:1px solid">Animals</th>
+                        <th>Exhibit</th>
+                        <th>Region</th>
+                        <th>Animals</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="border:1px solid">Jungle Trek</td>
-                        <td style="border:1px solid">Amazon Rainforest</td>
-                        <td style="border:1px solid">Tigers, Parrots, Monkeys</td>
+                        <td>Jungle Trek</td>
+                        <td>Amazon Rainforest</td>
+                        <td>Tigers, Parrots, Monkeys</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid">Savannah Safari</td>
-                        <td style="border:1px solid">African Savannah</td>
-                        <td style="border:1px solid">Lions, Giraffes, Elephants</td>
+                        <td>Savannah Safari</td>
+                        <td>African Savannah</td>
+                        <td>Lions, Giraffes, Elephants</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid">Arctic Wonders</td>
-                        <td style="border:1px solid">Polar Regions</td>
-                        <td style="border:1px solid">Polar Bears, Penguins</td>
+                        <td>Arctic Wonders</td>
+                        <td>Polar Regions</td>
+                        <td>Polar Bears, Penguins, Snow Owls</td>
                     </tr>
                 </tbody>
             </table>

@@ -1,0 +1,23 @@
+body{
+	background-color:LemonChiffon;
+}
+
+Header{
+        background-color:rgb(221, 224, 171);
+}
+
+nav,li{
+        background-color:#97cba9;
+}
+
+footer{
+        background-color:#668ba4;
+}
+
+#children{
+color:#668ba4;
+}
+
+.time{
+border:1px solid;
+}

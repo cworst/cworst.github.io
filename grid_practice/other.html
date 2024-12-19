@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>grids!</title>
+<script src="../js/init.js"></script>
+<style>
+.grid{
+        display:grid;
+        grid-template-rows:repeat(9,1fr);
+        grid-template-columns:repeat(9,1fr);
+        height:80vh;
+        text-align:center;
+        font-size:4em;
+        gap:10px;
+}
+.header{
+grid-column-start:1;
+grid-column-end:7;
+grid-row-start:1;
+grid-row-end:4;
+background-color:LemonChiffon;
+}
+.sider{
+grid-column-start:1;
+grid-column-end:4;
+grid-row-start:4;
+grid-row-end:10;
+background-color:LemonChiffon;
+}
+.main{
+grid-column-start:4;
+grid-column-end:7;
+grid-row-start:4;
+grid-row-end:7;
+background-color:LemonChiffon;
+}
+.sidel{
+grid-column-start:7;
+grid-column-end:10;
+grid-row-start:1;
+grid-row-end:7;
+background-color:LemonChiffon;
+}
+.footer{
+grid-column-start:4;
+grid-column-end:10;
+grid-row-start:7;
+grid-row-end:10;
+background-color:LemonChiffon;
+}
+
+</style>
+
+</head>
+<body>
+        <div class="grid">
+                <div class="header">a</div>
+                <div class="sider">c</div>
+                <div class="main">d</div>
+                <div class="sidel">b</div>
+                <div class="footer">e</div>
+        </div>
+
+</body>
+</html>
+
+
+

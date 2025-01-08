@@ -4,11 +4,14 @@ body {
 }
 
 .sunflower {
-background-color:CornSilk;
+	background-color:CornSilk;
 }
 .bree-serif-regular {
-  font-family: "Bree Serif", serif;
-  font-weight: 400;
-  font-style: normal;
+ 	 font-family: "Bree Serif", serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+a {
+	color:gray;
 }
 

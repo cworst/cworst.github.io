@@ -14,4 +14,23 @@ body {
 a {
 	color:DimGray;
 }
+.grid2{
+        display:grid;
+        grid-template-rows:repeat(10,1fr);
+        grid-template-columns:repeat(10,1fr);
+        height:80vh;
+        text-align:center;
+        font-size:2em;
+        gap:10px;
+}
+.header{
+        grid-column-start:1;
+        grid-column-end:11;
+        grid-row-start:1;
+        grid-row-end:3;
+        background-color:LightBlue;
+        border:2px solid SteelBlue;
+}
+
+
 

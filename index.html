@@ -14,23 +14,55 @@
 	width:100px;
 	height:100px;
 }
+.sider{
+grid-column-start:1;
+grid-column-end:2;
+grid-row-start:2;
+grid-row-end:8;
+background-color:LemonChiffon;
+}
+.main{
+grid-column-start:2;
+grid-column-end:8;
+grid-row-start:2;
+grid-row-end:8;
+background-color:LemonChiffon;
+}
+.sidel{
+grid-column-start:8;
+grid-column-end:11;
+grid-row-start:2;
+grid-row-end:8;
+background-color:SteelBlue;
+}
+.footer{
+grid-column-start:1;
+grid-column-end:11;
+grid-row-start:8;
+grid-row-end:10;
+background-color:LemonChiffon;
+}
+
 	</style>
 
 	</head>
 	<body>
 
-<h1>Welcome to my website!</h1>
+<div class="header"><h1>Welcome to my website!</h1></div>
 <br>
-<p>My name is Madi and
-I like owls and herons :)</p>
-<br>
+<div class="sidel"><p>My name is Madi and
+I like owls and herons :)</p></div>
+
+<div class="grid2">
+<section>
 <div class="sunflower">
+<h2>About Me!</h2>
 <p>I go to Arlington Tech, I am a ninth grader and I am intrested in/like math, reading and sour cream and onion pringles.</p>
-</div> 
-<br> 
+</section>
 
 <p>This is my favorite quote!<q>The world revolves around the sun? Thats odd. I thought it revolved around me!</q> - Lucy Van Pelt</p>
 <br>
+</div>
 <div id="image"><img style='border:2px solid SteelBlue' src="images/lucy3.jpeg"
 alt="Lucy"
 srcset="images/lucy4.jpeg 480w,

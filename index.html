@@ -10,77 +10,120 @@
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 	<style>
 #image{
-	margin-left:45%;
+	margin-top:2%;
+	margin-left:38%;
 	width:100px;
 	height:100px;
 }
-.sider{
-grid-column-start:1;
-grid-column-end:2;
-grid-row-start:2;
-grid-row-end:8;
-background-color:LemonChiffon;
+#text{
+	margin-top:10%;
+}
+.sider1{
+	grid-column-start:1;
+	grid-column-end:4;
+	grid-row-start:3;
+	grid-row-end:5;
+	background-color:LightBlue;
+        border:2px solid SteelBlue;
+	font-size:15px;
+}
+.sider2{
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:5;
+        grid-row-end:8;
+        background-color:LightBlue;
+        border:2px solid SteelBlue;
 }
 .main{
-grid-column-start:2;
-grid-column-end:8;
-grid-row-start:2;
-grid-row-end:8;
-background-color:LemonChiffon;
+	grid-column-start:4;
+	grid-column-end:8;
+	grid-row-start:3;
+	grid-row-end:8;
+	background-color:LightBlue;
+        border:2px solid SteelBlue;
 }
 .sidel{
-grid-column-start:8;
-grid-column-end:11;
-grid-row-start:2;
-grid-row-end:8;
-background-color:SteelBlue;
+	grid-column-start:8;
+	grid-column-end:11;
+	grid-row-start:3;
+	grid-row-end:8;
+	background-color:LightBlue;
+	border:2px solid SteelBlue;
 }
 .footer{
-grid-column-start:1;
-grid-column-end:11;
-grid-row-start:8;
-grid-row-end:10;
-background-color:LemonChiffon;
+	grid-column-start:1;
+	grid-column-end:11;
+	grid-row-start:8;
+	grid-row-end:10;
+	background-color:LightBlue;
+        border:2px solid SteelBlue;
+}
+.grid{
+        display:grid;
+        grid-template-rows:repeat(10,1fr);
+        grid-template-columns:repeat(10,1fr);
+        height:80vh;
+        text-align:center;
+        font-size:1em;
+        gap:10px;
+}
+#text2{
+	margin-top:2%;
+}
+#text3{
+font-size:3px;
 }
 
 	</style>
 
 	</head>
 	<body>
+<div class="grid">
+	<div class="header"><h1>Welcome to my website!</h1></div>
 
-<div class="header"><h1>Welcome to my website!</h1></div>
-<br>
-<div class="sidel"><p>My name is Madi and
-I like owls and herons :)</p></div>
+	<div class="sidel"><div class="bree-serif-regular">
+		<h4>About me!</h4>
+		<h5>for those who care</h5>
+	<div class="text3">
+		<ul>
+			<li>I am fourteen years old</li>
+			<li>I like reading</li>
+			<li>I have two brothers</li>
+			<li>I talk a lot</li>
+		</ul>
+	</div>
 
-<div class="grid2">
+	</div></div>
+
+	<div class="main">
+	<div id="image"><img style='border:2px solid SteelBlue' src="images/lucy3.jpeg"
+	alt="Lucy"
+	srcset="images/lucy4.jpeg 480w,
+    	images/lucy2.png 800w,
+    	images/lucy.jpg 1200w"
+	sizes="(max-width: 480px) 95vw,
+    	(max-width: 800px) 45vw,
+    	30vw"></div>
+<div id="text"><p>I really like Lucy Van Pelt</p></div>
+	</div>
+	
+<div class="sider1"><div class="bree-serif-regular">
+	<p>Introduction: My name is Madi and I am a freshman at Arlington Tech</p>
+</div></div>
+
+<div class="sider2"><div class="bree-serif-regular">
 <section>
-<div class="sunflower">
-<h2>About Me!</h2>
-<p>I go to Arlington Tech, I am a ninth grader and I am intrested in/like math, reading and sour cream and onion pringles.</p>
-</section>
+	<h4>stuff I like</h4>
+	<p>I like to read, draw and eat sour cream and onion pringles</p>
+	</section>
+	</div></div>
 
-<p>This is my favorite quote!<q>The world revolves around the sun? Thats odd. I thought it revolved around me!</q> - Lucy Van Pelt</p>
-<br>
-</div>
-<div id="image"><img style='border:2px solid SteelBlue' src="images/lucy3.jpeg"
-alt="Lucy"
-srcset="images/lucy4.jpeg 480w,
-    images/lucy2.png 800w,
-    images/lucy.jpg 1200w"
-sizes="(max-width: 480px) 95vw,
-    (max-width: 800px) 45vw,
-    30vw"></div>
-<br>
+<!--i was really worried about adding that many divs but i made it work-->
 
-<div class="bree-serif-regular">
-<p> hi im seeing how this works </p>
-
+	<div class="footer"><div id="text2"><a href="BurnBook/">Click here to read my journal or my BurnBook!</a>
 <br>
-
-<a href="BurnBook/">Click here to read my journal or my BurnBook!</a>
-<br>
-<a href="projects.html">next page</a>
+	<a href="projects.html">next page</a></div></div>
 </div>
 </body>
 </html>

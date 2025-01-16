@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>diner</title>
+
+<script src="js/init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Jersey+15&display=swap" rel="stylesheet">
+
+<style>
+.grid{
+        display:grid;
+        grid-template-rows:repeat(10,1fr);
+        grid-template-columns:repeat(10,1fr);
+        height:80vh;
+        text-align:center;
+        gap:10px;
+}
+.header{
+        grid-column-start:1;
+        grid-column-end:11;
+        grid-row-start:1;
+        grid-row-end:3;
+        background-color:Pink;
+        border:2px solid PaleVioletRed;
+	font-size:4em;
+}
+.left{
+ 	grid-column-start:1;
+        grid-column-end:6;
+        grid-row-start:3;
+        grid-row-end:11;
+        background-color:PaleTurquoise;
+        border:2px solid MediumTurquoise;
+	font-size:20px;
+}
+.right{
+        grid-column-start:6;
+        grid-column-end:11;
+        grid-row-start:3;
+        grid-row-end:11;
+        background-color:LemonChiffon;
+        border:2px solid Khaki;
+        font-size:20px;
+}	
+.jersey-15-regular{
+  font-family: "Jersey 15", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.sixtyfour{
+  font-family: "Sixtyfour", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+</style>
+</head>
+<body>
+<div class="grid">
+<div class="header"><div class="jersey-15-regular">8-Bit Diner</div></div>
+<div class="left"><div class="jersey-15-regular">
+<p>MENU</P>
+<ul>
+<li>burger</li>
+<li>hotdog</li>
+<li>waffle</li>
+<li>chicken nuggets</li>
+<li>milkshake</li>
+<li>pancake</li>
+<li>scramble egg</li>
+<li>cookie pie</li>
+<li>coke</li>
+</ul>
+</div></div>
+
+<div class="right">hi</div>
+
+</body>

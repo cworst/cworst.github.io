@@ -6,4 +6,4 @@ body{
    a{
        margin-left:10%;
     }
-![screenshot](images/Screenshot.png)
+![screenshot](../images/Screenshot.png)

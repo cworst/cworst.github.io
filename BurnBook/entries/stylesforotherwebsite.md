@@ -1,1 +1,12 @@
+body{
+        background-color:rgb(211, 237, 255);
+        font-family: "Times New Roman", serif;
+        font-size:20px;
+    }
+   a{
+       margin-left:10%;
+    }
+
+
+
 ![screenshot](../../images/Screenshot.png)

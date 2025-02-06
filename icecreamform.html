@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+                <title>An HTML Form</title>
+                <script src="js/init.js"></script>
+<style>
+.grid{
+        display:grid;
+        grid-template-rows:repeat(10,1fr);
+        grid-template-columns:repeat(10,1fr);
+        height:80vh;
+        text-align:center;
+        font-size:2em;
+        gap:10px;
+.q1{
+        grid-column-start:1;
+        grid-column-end:12;
+        grid-row-start:3;
+        grid-row-end:5;
+        background-color:LightBlue;
+        border:2px solid SteelBlue;
+        font-size:2em;
+}
+.header{
+        grid-column-start:1;
+        grid-column-end:12;
+        grid-row-start:1;
+        grid-row-end:3;
+        background-color:LightBlue;
+        border:2px solid SteelBlue;
+        font-size:1em;
+}
+</style>
+</head>
+<body>
+<div class="grid">
+       <div class="header">Youre invited to an ice cream party</div>
+        <div class="q1"><form action="https://httpbin.org/post" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="email@email.com">
+        <input type="submit" name="submit">
+        </form></div>
+</div>
+</body>
+</html>

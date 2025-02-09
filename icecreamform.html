@@ -102,17 +102,17 @@
         <div class="q1"><form action="https://httpbin.org/post" method="POST">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="email@email.com">
-        <input type="submit" name="submit">
+	<input type="reset" value="reset">
         </form></div>
  <div class="q2"><form action="https://httpbin.org/post" method="POST">
         <label for="phone">Phone Number</label>
         <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-000">
-        <input type="submit" name="submit">
+	<input type="reset" value="reset">
         </form></div>
  <div class="q3"><form action="https://httpbin.org/post" method="POST">
         <label for="people">How many people</label>
         <input type="number" id="people" name="people" min="0" max="10" placeholder="00">
-        <input type="submit" name="submit">
+	<input type="reset" value="reset">
         </form></div>
 <div class="q4"><form action="https://httpbin.org/post" method="POST">
 <p>what is your favorite icecream flavor?</p>
@@ -124,6 +124,7 @@
   <input type="radio" id="strawberry" name="flavor" value="strawberry" required>
   <label for="other">other</label>
   <input type="radio" id="other" name="flavor" value="other" required>
+	<input type="reset" value="reset">
         </form></div>
 <div class="q5"><form action="https://httpbin.org/post" method="POST">
 <p>which toppings do you like?</p>
@@ -137,6 +138,7 @@
   <input type="checkbox" id="gummybears" name="gummybears">
   <label for="other1">other</label>
   <input type="checkbox" id="other1" name="other">
+	<input type="reset" value="reset">
 	</form></div>
 <div class="q6"><form action="https://httpbin.org/post" method="POST">
 <label for="entertainment">entertainment?</label>
@@ -149,11 +151,13 @@
   <option value="Facepaint">Face painting</option>
   <option value="magician">magician</option>
 </select>
+<input type="reset" value="reset">
 	</form></div>
  <div class="q7"><form action="https://httpbin.org/post" method="POST">
         <label for="suggestions">suggestions or comments?</label>
-        <input type="text" id="suggestions" name="suggestions" placeholder="madi is awesome">
+        <textarea id="suggestions" name="suggestions" rows="2" cols="4" placeholder="madi is awesome">write here</textarea>
         <input type="submit" name="submit">
+	<input type="reset" value="reset">
         </form></div>
 <div class="q8">
 <p>!MR CHRIS YOU SAID THAT IT WAS OKAY IF IT SAID IT WASNT VALID DUE TO THE RANDOM PARSE ERROR DONT GIVE ME A BAD GRADE PLEASE!</p></div>

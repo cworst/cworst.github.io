@@ -8,6 +8,7 @@ my form is a text entry and i chose a post request beacause i dont want it to be
 <br>
 my pages
 ![Markdown logo](../../images/yada.png)
+![Markdown logo](../../images/screen.png)
 <br>
 the development process
 <br>

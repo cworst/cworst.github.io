@@ -23,5 +23,8 @@ I am learning how to write in here for the first time
 ## This is my project 
 - [Project](https://busy412.wordpress.com/)
 
-# Reflection for Project
+# Reflection for wordpress project
 - [Reflection](entries/ProjectReflection.md)
+
+# Reflection for ACC Cosmetology project
+- [reflection](entries/accprogram.md)

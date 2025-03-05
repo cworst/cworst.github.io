@@ -4,7 +4,7 @@ here is a link to the website
 <a href="https://github.com/cworst/the-second-choices">our repo</a>
 
 
-my form is a text entry and i chose a post request beacause i dont want it to be put in the url and I didnt want there to be a limit to the wordcount. Reviews should also be private so not having the text in the url would be more secure.
+My form is a long text entry for in depth feedback. I chose a post request beacause I dont want it to be put in the url and I didnt want there to be a limit to the wordcount. Reviews should also be private so not having the text in the url would be more secure.
 <br>
 my pages
 ![Markdown logo](../../images/yada.png)

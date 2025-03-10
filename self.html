@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Self Portrait</title>
+    <script src="js/init.js"></script>
+    <style>
+        canvas{
+            display:block;
+            border:1px solid;
+            margin:auto;
+            margin-top:50px
+        }
+    </style>
+</head>
+<body>
+
+<!--note: set the width and height
+using HTML attributes, not CSS!-->
+<canvas id="myCanvas" width="400" height="400"></canvas>
+  
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = '#c9e8ff';
+    ctx.fillRect(0,0,400,400);
+
+/*
+    ctx.fillStyle = "SteelBlue";
+    ctx.fillRect(10, 10, 200, 100);
+
+    ctx.fillStyle = "LightBlue";
+    ctx.fillRect(100,100,100,100);
+
+    ctx.strokeStyle = "Royalblue";
+    ctx.lineWidth=10;
+    ctx.beginPath();
+    ctx.arc(100,300,25,0,Math.PI);
+    ctx.stroke();
+    ctx.fill();
+   
+    ctx.fillStyle='blue';
+    ctx.beginPath();
+    ctx.ellipse(200,200,100,50,0.25*Math.PI,0,2*Math.PI);
+    ctx.fill();
+
+
+    ctx.fillStyle='LightSeaGreen'
+    ctx.beginPath();
+    ctx.moveTo(350,350);
+    ctx.lineTo(250,350);
+    ctx.lineTo(220,220);
+    ctx.lineTo(370,160);
+    ctx.lineTo(300,300);
+    ctx.stroke();
+    ctx.fill();
+*/
+
+    ctx.beginPath();
+    ctx.arc(280, 280, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "#2a2a30";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "Black";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(120, 280, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "#2a2a30";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "Black";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(200, 200, 90, 0, 2 * Math.PI);
+    ctx.fillStyle = "#ffeace";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "#ffe1ba";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(240, 200, 20, 0, 2 * Math.PI);
+    ctx.fillStyle = "Black";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "White";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(160, 200, 20, 0, 2 * Math.PI);
+    ctx.fillStyle = "Black";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "White";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(200, 120, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "#2a2a30";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "Black";
+    ctx.stroke();
+
+
+    ctx.beginPath();
+    ctx.arc(120, 140, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "#2a2a30";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "Black";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(280, 140, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "#2a2a30";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "Black";
+    ctx.stroke();
+
+    ctx.strokeStyle = "Black";
+    ctx.lineWidth=10;
+    ctx.beginPath();
+    ctx.arc(200,230,25,0,Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#ffeace";
+    ctx.fill();
+</script>
+
+  </script>
+</body>

@@ -72,15 +72,58 @@
 	margin-top:2%;
 }
 #text3{
-font-size:3px;
+	font-size:3px;
+}
+.emoji{
+	transition:transform ease-in-out 2s;
 }
 
+
+.emoji:hover{
+	transform:rotate(900deg);
+}
+.grid3{
+        display:grid;
+        grid-template-rows:repeat(1,1fr);
+        grid-template-columns:repeat(3,1fr);
+        height:12vh;
+        text-align:center;
+        font-size:1em;
+        gap:10px;
+}
+.b1{
+	grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:1;
+        grid-row-end:2;
+        background-color:LightBlue;
+	font-size:40px;
+}
+.b2{
+        grid-column-start:2;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end:2;
+        background-color:LightBlue;
+}
+.b3{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end:2;
+        background-color:LightBlue;
+	font-size:40px;
+}
 	</style>
 
 	</head>
 	<body>
 <div class="grid">
-	<div class="header"><h1>Welcome to my website!</h1></div>
+	<div class="header">
+		<div class="grid3">
+			<div class="b1"><br><div class="emoji">&#128192;</div></div>
+			<div class="b2"><br><h1>Welcome to my website!</h1></div> 
+			<div class="b3"><br><div class="emoji">&#128191;</div></div></div></div>
 
 	<div class="sidel"><div class="bree-serif-regular">
 		<h4>About me!</h4>
@@ -97,14 +140,8 @@ font-size:3px;
 	</div></div>
 
 	<div class="main">
-	<div id="image"><img style='border:2px solid SteelBlue' src="images/lucy3.jpeg"
-        alt="Lucy"
-        srcset="images/lucy4.jpeg 480w,
-        images/lucy2.png 800w,
-        images/lucy.jpg 1200w"
-        sizes="(max-width: 480px) 95vw,
-        (max-width: 800px) 45vw,
-        30vw"></div>
+<br>
+	<img style='border:2px solid SteelBlue' src="images/lucy2.png" width="73" height="100" alt="Lucy">
 <div id="text"><p>I really like Lucy Van Pelt</p></div>
 <br>
 <a href="https://github.com/cworst/cworst.github.io">My GitHub repo!</a>

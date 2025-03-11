@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Emoji</title>
+    <script src="js/init.js"></script>
+<style>
+body{
+    background-color: #c9e8ff;
+}
+
+/* Build the emoji face with gradients and shadow */
+.emoji{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    background-image: radial-gradient(
+        #feca3e 58%,
+        #ff8000 80%
+    );
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
+
+    animation-name: bounceAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Build the eyes */
+.eyes {
+    display: flex;
+}
+
+.eye {
+    border: solid #e9fbfa;
+    border-width: 0 16px 16px 0;
+    position: absolute;
+    padding: 18px;
+    background-color: #e9fbfa;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pupil {
+    border: solid #663d0f;
+    border-width: 0 16px 16px 0;
+    position: absolute;
+    padding: 12px;
+    background-color: #663d0f;
+    position: absolute;
+    border-radius: 40%;
+    top: 95px;
+    left: 25%;
+
+    animation-name: rotateAnimation; /* Reference the name of your keyframes */
+    animation-duration: 2s; /* Set the duration of one animation cycle */
+    animation-timing-function: linear; /* Define a steady pace for the animation */
+    animation-iteration-count: infinite; /* Repeat the animation indefinitely */
+}
+.pupil2 {
+    border: solid #663d0f;
+    border-width: 0 16px 16px 0;
+    position: absolute;
+    padding: 12px;
+    background-color: #663d0f;
+    position: absolute;
+    border-radius: 40%;
+    top: 95px;
+    right: 25%;
+
+    animation-name: rotateAnimation; /* Reference the name of your keyframes */
+    animation-duration: 2s; /* Set the duration of one animation cycle */
+    animation-timing-function: linear; /* Define a steady pace for the animation */
+    animation-iteration-count: infinite; /* Repeat the animation indefinitely */
+}
+
+
+.left {
+    top: 90px;
+    left: 25%;
+}
+
+.right {
+    top: 90px;
+    right: 25%;
+}
+
+.mouth{
+    height: 100px;
+    width: 220px;
+    background-color: #663d0f;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    overflow: hidden;
+    border-radius: 180px;
+}
+
+.teeth{
+    height: 40px;
+    width: 220px;
+    background-color: #e9fbfa;
+    position: absolute;
+    bottom: 75px;
+    border-radius: 5px 5px 80px 80px;
+}
+
+@keyframes bounceAnimation {
+    0%, 100% { transform: translateY(20px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+</style>
+</head>
+<body>
+<h1>me core</h1>
+<div class="emoji">
+        <div class="eyes">
+            <div class="eye left"></div>
+		<div class="pupil"></div>
+            <div class="eye right"></div>
+		<div class="pupil2"></div>
+        </div>
+        <div class="mouth">
+            <div class="teeth"></div>
+            <div class="tongue"></div>
+        </div>
+    </div>       
+</body>
+</html>

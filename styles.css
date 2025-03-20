@@ -28,6 +28,8 @@ a {
         grid-column-end:11;
         grid-row-start:1;
         grid-row-end:3;
+	height:15vh;
+	overflow: hidden;
         background-color:LightBlue;
         border:2px solid SteelBlue;
 }

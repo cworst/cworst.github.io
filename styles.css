@@ -1,6 +1,6 @@
 body {
         background-color:LemonChiffon;
-        color:gray;
+        color:black;
 }
 
 .sunflower {
@@ -12,7 +12,7 @@ body {
   	font-style: normal;
 }
 a {
-	color:DimGray;
+	color:Black;
 }
 .grid2{
         display:grid;

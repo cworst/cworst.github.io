@@ -11,6 +11,5 @@
  - The MVP will use the same mechanics but it wont have the different bucket rule. 
 
 ##Concept art
-<a href="../../jsstuff/game.html">concept</a>
- 
+- [Game](../../jsstuff/game.html) 
 

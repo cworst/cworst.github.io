@@ -28,3 +28,6 @@ I am learning how to write in here for the first time
 
 # Reflection for ACC Cosmetology project
 - [reflection](entries/accprogram.md)
+
+## Game Concept
+- [Game](entries/game.md)

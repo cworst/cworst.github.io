@@ -8,7 +8,7 @@
  - The player will move using the arrow keys to move the bucket.
 
 #What features will you include in your MVP?
- - The MVP will use the same mechanics but it wont have the different bucket rule. 
+ - The MVP will use the same mechanics but it wont have the different bucket rule or a score. 
 
 ##Concept art
 - [Game](../../jsstuff/game.html) 

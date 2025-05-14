@@ -23,6 +23,10 @@ const Trap = {
         //key:value pair
         x : 100,
         y : 200,
+	minX: 80,
+	minY: 180,
+	maxX: 120,
+	maxY: 220,
         speed: 3
 };
 const shell = {
@@ -70,6 +74,10 @@ function moveTrap(){
 const trash = {
         x : 200,
         y : 200,
+	minX: 80,
+	minY: 180,
+	maxX: 120,
+	maxY: 220,
         speed: 3
 };
 
@@ -227,15 +235,11 @@ function animate() {
 	 let wave_min_y = y;
 	 let wave_max_x = x+400;
 	 let wave_max_y = y+50; 
-     let Trap_min_x = Trap.x - 20;
-     let Trap_min_y = Trap.y - 20;
-     let Trap_max_x = Trap.x + 20;
-     let Trap_max_y = Trap.y + 20;
  
-     if( Trap_max_y > wave_min_y &&
-         Trap_min_y < wave_max_y &&
-         Trap_max_x > wave_min_x && 
-         Trap_min_x < wave_max_x){
+     if( Trap.maxY > wave_min_y &&
+         Trap.minY < wave_max_y &&
+         Trap.maxX > wave_min_x && 
+         Trap.mixX < wave_max_x){
             gameRunning = false;
      }
 
@@ -243,8 +247,8 @@ function animate() {
       let trash_min_y = trash.y - 20;
       let trash_max_x = trash.x + 20;
       let trash_max_y = trash.y + 20;
-  
-      if(wave_max_y > trash_min_y && wave_min_y < trash_max_y && wave_max_x > trash_min_x && wave_min_x < trash_max_x){
+    }
+      if(wave_max_y > Trash.minY && wave_min_y < Trash.maxY && wave_max_x > Trash.minX && wave_min_x < Trash.maxX){
           gameRunning = false;
       }
 
@@ -255,30 +259,20 @@ function checkColl(){
      let shell_min_y = y-20;
      let shell_max_x = x+20;
      let shell_max_y = y+20; 
-     let Trap_min_x = Trap.x - 20;
-     let Trap_min_y = Trap.y - 20;
-     let Trap_max_x = Trap.x + 20;
-     let Trap_max_y = Trap.y + 20;
- 
-     if( Trap_max_y > shell_min_y &&
-         Trap_min_y < shell_max_y &&
-         Trap_max_x > shell_min_x && 
-         Trap_min_x < shell_max_x){
-        score += 1;
-        console.log("hey idiot I am working");
-    }
 
-      let trash_min_x = trash.x - 20;
-      let trash_min_y = trash.y - 20;
-      let trash_max_x = trash.x + 20;
-      let trash_max_y = trash.y + 20;
+
+     if( Trap.maxY > shell_min_y &&
+         Trap.minY < shell_max_y &&
+         Trap.maxX > shell_min_x && 
+         Trap.mixX < shell_max_x){
+            score++;
+    }
   
-      if(shell_max_y > trash_min_y &&
-         shell_min_y < trash_max_y && 
-         shell_max_x > trash_min_x && 
-         shell_min_x < trash_max_x){
-        score += 1;
-        console.log("hey idiot I am working");
+      if(shell_max_y > Trash.minY &&
+         shell_min_y < Trash.maxY && 
+         shell_max_x > Trash.minX && 
+         shell_min_x < Trash.maxX){
+          score++;
       }
 
 }

@@ -25,6 +25,11 @@ const Trap = {
         y : 200,
         speed: 3
 };
+const shell = {
+        x : 300,
+        y : 200,
+        d : 2.9
+};
 
 const keys = {};
 
@@ -81,7 +86,6 @@ function drawtrash() {
 }
 
 function movetrash(){
-        console.log ("moving")
         if(keys['s'] &&
                 trash.y < 373){
                 trash.y += trash.speed;
@@ -159,7 +163,7 @@ function lon(x,y,d){
     ctx.fill();
 }
 
-function shell(x,y,d){
+function drawshell(x,y,d){
     lon(x-10,y-15,d);
     lon(x+10,y-15,-d);
     lon(x,y-20,d+.2);
@@ -208,8 +212,8 @@ function animate() {
     drawtrash();
     movetrash();
     checkCollision();
-    checkColl();
     drawScore();
+    checkColl();
     if(gameRunning){
     if(score > 1000){
         gameRunning = false;
@@ -233,7 +237,7 @@ function animate() {
          Trap_max_x > wave_min_x && 
          Trap_min_x < wave_max_x){
             gameRunning = false;
-    }
+     }
 
       let trash_min_x = trash.x - 20;
       let trash_min_y = trash.y - 20;
@@ -260,7 +264,8 @@ function checkColl(){
          Trap_min_y < shell_max_y &&
          Trap_max_x > shell_min_x && 
          Trap_min_x < shell_max_x){
-            score++;
+        score += 1;
+        console.log("hey idiot I am working");
     }
 
       let trash_min_x = trash.x - 20;
@@ -272,7 +277,8 @@ function checkColl(){
          shell_min_y < trash_max_y && 
          shell_max_x > trash_min_x && 
          shell_min_x < trash_max_x){
-          score++;
+        score += 1;
+        console.log("hey idiot I am working");
       }
 
 }

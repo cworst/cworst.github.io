@@ -23,16 +23,21 @@ const Trap = {
         //key:value pair
         x : 100,
         y : 200,
-	minX: 80,
-	minY: 180,
-	maxX: 120,
-	maxY: 220,
+        speed: 3
+};
+const trash = {
+        x : 200,
+        y : 200,
         speed: 3
 };
 const shell = {
-        x : 300,
-        y : 200,
-        d : 2.9
+        x : (Math.random() * 340) + 30,
+        y : (Math.random() * 150) + 50,
+        d : 2.9, 
+};
+
+const wave = {
+        y : 0,
 };
 
 const keys = {};
@@ -70,16 +75,6 @@ function moveTrap(){
         }
 
 }
-
-const trash = {
-        x : 200,
-        y : 200,
-	minX: 80,
-	minY: 180,
-	maxX: 120,
-	maxY: 220,
-        speed: 3
-};
 
 function drawtrash() {
     ctx.beginPath();
@@ -140,7 +135,7 @@ function bubs(x,y){
     bub(x+90,y);
 }
 
-function wave(x,y){
+function drawwave(x,y){
     circ(x,y);
     circ(x+110,y);
     circ(x+220,y);
@@ -211,9 +206,7 @@ function drawScore(){
 function animate() {
     drawRect(6,100);
     sand(0,0);
-    wave(40,10);
-    shell(70,160,2.9);
-    shell(140,140,2.9);
+    drawwave();
     gar(300,130);
     drawTrap();
     moveTrap();
@@ -231,47 +224,33 @@ function animate() {
 }
 
  function checkCollision(){
-     let wave_min_x = x;
-	 let wave_min_y = y;
-	 let wave_max_x = x+400;
-	 let wave_max_y = y+50; 
- 
-     if( Trap.maxY > wave_min_y &&
-         Trap.minY < wave_max_y &&
-         Trap.maxX > wave_min_x && 
-         Trap.mixX < wave_max_x){
+     
+     if( Trap.maxY > wave.minY &&
+         Trap.minY < wave.maxY)
+     {
             gameRunning = false;
      }
 
-      let trash_min_x = trash.x - 20;
-      let trash_min_y = trash.y - 20;
-      let trash_max_x = trash.x + 20;
-      let trash_max_y = trash.y + 20;
-    }
-      if(wave_max_y > Trash.minY && wave_min_y < Trash.maxY && wave_max_x > Trash.minX && wave_min_x < Trash.maxX){
+
+      if(wave.maxY > trash.minY && wave.minY < trash.maxY){
           gameRunning = false;
       }
 
 }
 
 function checkColl(){
-     let shell_min_x = x-20;
-     let shell_min_y = y-20;
-     let shell_max_x = x+20;
-     let shell_max_y = y+20; 
 
-
-     if( Trap.maxY > shell_min_y &&
-         Trap.minY < shell_max_y &&
-         Trap.maxX > shell_min_x && 
-         Trap.mixX < shell_max_x){
+     if( Trap.maxY > shell.minY &&
+         Trap.minY < shell.maxY &&
+         Trap.maxX > shell.minX && 
+         Trap.mixX < shell.maxX){
             score++;
     }
   
-      if(shell_max_y > Trash.minY &&
-         shell_min_y < Trash.maxY && 
-         shell_max_x > Trash.minX && 
-         shell_min_x < Trash.maxX){
+      if(shell.maxY > trash.minY &&
+         shell.minY < trash.maxY && 
+         shell.maxX > trash.minX && 
+         shell.minX < trash.maxX){
           score++;
       }
 

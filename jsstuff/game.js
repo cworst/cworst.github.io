@@ -37,7 +37,7 @@ const shell = {
 };
 
 const wave = {
-        y : 0,
+        y : 0
 };
 
 const keys = {};
@@ -224,13 +224,20 @@ function animate() {
 }
 
  function checkCollision(){
-     
+    
+	 let wave["minY"] = y;
+     let wave["maxY"] = y+50; 
+
      if( Trap.maxY > wave.minY &&
          Trap.minY < wave.maxY)
      {
             gameRunning = false;
      }
 
+      let trash["minX"] = trash.x - 20;
+      let trash["minY"] = trash.y - 20;
+      let trash["maxX"] = trash.x + 20;
+      let trash["maxY"] = trash.y + 20;
 
       if(wave.maxY > trash.minY && wave.minY < trash.maxY){
           gameRunning = false;
@@ -239,6 +246,11 @@ function animate() {
 }
 
 function checkColl(){
+
+     let shell["minX"] = x-20;
+     let shell["minY"] = y-20;
+     let shell["maxX"] = x+20;
+     let shell["maxY"] = y+20;
 
      if( Trap.maxY > shell.minY &&
          Trap.minY < shell.maxY &&

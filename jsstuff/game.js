@@ -247,10 +247,10 @@ function animate() {
 
 function checkColl(){
 
-     let shell["minX"] = x-20;
-     let shell["minY"] = y-20;
-     let shell["maxX"] = x+20;
-     let shell["maxY"] = y+20;
+     let shell ["minX"] = x-20;
+     let shell ["minY"] = y-20;
+     let shell ["maxX"] = x+20;
+     let shell ["maxY"] = y+20;
 
      if( Trap.maxY > shell.minY &&
          Trap.minY < shell.maxY &&

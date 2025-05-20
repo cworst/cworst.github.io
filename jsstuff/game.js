@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 
 let x = 0;
 let y = 0;
+let d = 0;
 let dx = 5;
 let dy = 1;
 let score = 0;
@@ -31,13 +32,23 @@ const trash = {
         speed: 3
 };
 const shell = {
-        x : (Math.random() * 340) + 30,
-        y : (Math.random() * 150) + 50,
-        d : 2.9, 
+        //x : (Math.random() * 340) + 30,
+        //y : (Math.random() * 150) + 50,
+        x : 200,
+        y : 200,
+        d : 2.9 
 };
 
 const wave = {
-        y : 0
+        y : 0,
+        x : 0
+};
+
+const gar = {
+        //x : (Math.random() * 340) + 30,
+        //y : (Math.random() * 150) + 50,
+        x : 300,
+        y : 200,
 };
 
 const keys = {};
@@ -135,15 +146,15 @@ function bubs(x,y){
     bub(x+90,y);
 }
 
-function drawwave(x,y){
+function drawwave(){
     circ(x,y);
-    circ(x+110,y);
-    circ(x+220,y);
-    circ(x+330,y);
-    bubs(x-30,y+60);
-    bubs(x+60,y+60);
-    bubs(x+180,y+60);
-    bubs(x+270,y+60);
+    circ(x+120,y);
+    circ(x+230,y);
+    circ(x+350,y);
+    bubs(x+10,y+60);
+    bubs(x+100,y+60);
+    bubs(x+220,y+60);
+    bubs(x+310,y+60);
 }
 
 function curve(x,y){
@@ -166,11 +177,11 @@ function lon(x,y,d){
     ctx.fill();
 }
 
-function drawshell(x,y,d){
-    lon(x-10,y-15,d);
-    lon(x+10,y-15,-d);
-    lon(x,y-20,d+.2);
-    curve(x,y);
+function drawshell(){
+    lon(shell.x-10,shell.y-15,shell.d);
+    lon(shell.x+10,shell.y-15,-shell.d);
+    lon(shell.x,shell.y-20,shell.d+.2);
+    curve(shell.x,shell.y);
 }
 
 function rect(x,y) {
@@ -188,14 +199,14 @@ function hol(x,y){
     ctx.fill();
 }
 
-function gar(x,y){
-    rect(x,y);
-    hol(x+13,y+14);
-    hol(x+35,y+14);
-    hol(x+57,y+14);
-    hol(x+57,y+35);
-    hol(x+13,y+35);
-    hol(x+35,y+35);
+function drawgar(){
+    rect(gar.x,gar.y);
+    hol(gar.x+13,gar.y+14);
+    hol(gar.x+35,gar.y+14);
+    hol(gar.x+57,gar.y+14);
+    hol(gar.x+57,gar.y+35);
+    hol(gar.x+13,gar.y+35);
+    hol(gar.x+35,gar.y+35);
 }
 
 function drawScore(){
@@ -206,15 +217,17 @@ function drawScore(){
 function animate() {
     drawRect(6,100);
     sand(0,0);
-    drawwave();
-    gar(300,130);
+    drawwave(0,0);
+    drawgar();
     drawTrap();
     moveTrap();
     drawtrash();
     movetrash();
+    drawshell();
     checkCollision();
     drawScore();
     checkColl();
+    wavem();
     if(gameRunning){
     if(score > 1000){
         gameRunning = false;
@@ -225,8 +238,8 @@ function animate() {
 
  function checkCollision(){
     
-	 let wave["minY"] = y;
-     let wave["maxY"] = y+50; 
+	 wave["minY"] = y;
+     wave["maxY"] = y+50; 
 
      if( Trap.maxY > wave.minY &&
          Trap.minY < wave.maxY)
@@ -234,10 +247,15 @@ function animate() {
             gameRunning = false;
      }
 
-      let trash["minX"] = trash.x - 20;
-      let trash["minY"] = trash.y - 20;
-      let trash["maxX"] = trash.x + 20;
-      let trash["maxY"] = trash.y + 20;
+      trash["minX"] = trash.x;
+      trash["minY"] = trash.y;
+      trash["maxX"] = trash.x + 15;
+      trash["maxY"] = trash.y + 10;
+
+      Trap["minX"] = Trap.x;
+      Trap["minY"] = Trap.y;
+      Trap["maxX"] = Trap.x + 15;
+      Trap["maxY"] = Trap.y + 10;
 
       if(wave.maxY > trash.minY && wave.minY < trash.maxY){
           gameRunning = false;
@@ -247,15 +265,22 @@ function animate() {
 
 function checkColl(){
 
-     let shell ["minX"] = x-20;
-     let shell ["minY"] = y-20;
-     let shell ["maxX"] = x+20;
-     let shell ["maxY"] = y+20;
+     shell ["minX"] = shell.x - 30;
+     shell ["minY"] = shell.y - 40;
+     shell ["maxX"] = shell.x + 10;
+     shell ["maxY"] = shell.y +5;
 
-     if( Trap.maxY > shell.minY &&
-         Trap.minY < shell.maxY &&
-         Trap.maxX > shell.minX && 
-         Trap.mixX < shell.maxX){
+     gar ["minX"] = gar.x-20;
+     gar ["minY"] = gar.y-20;
+     gar ["maxX"] = gar.x+80;
+     gar ["maxY"] = gar.y+40;
+
+     
+
+     if( shell.maxY > Trap.minY &&
+         shell.minY < Trap.maxY &&
+         shell.maxX > Trap.minX && 
+         shell.minX < Trap.maxX){
             score++;
     }
   
@@ -266,6 +291,35 @@ function checkColl(){
           score++;
       }
 
+     if( gar.maxY > Trap.minY &&
+         gar.minY < Trap.maxY &&
+         gar.maxX > Trap.minX && 
+         gar.minX < Trap.maxX){
+            score++;
+    }
+  
+      if(gar.maxY > trash.minY &&
+         gar.minY < trash.maxY && 
+         gar.maxX > trash.minX && 
+         gar.minX < trash.maxX){
+          score++;
+      }
+
+}
+
+function wavem(){
+        y += .007;
+        wave.top = y + 3;
+        requestAnimationFrame(wavem);
+
+
+         if(wave.y > 100)
+                 
+        {
+                console.log("yayay");
+          y -= .007;
+          wave.top = y - 3;
+         }
 }
 
 

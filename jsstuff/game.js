@@ -4,10 +4,11 @@ const ctx = canvas.getContext("2d");
 let x = 0;
 let y = 0;
 let d = 0;
-let dx = 5;
-let dy = 1;
 let score = 0;
 let gameRunning = true;
+let drawShell = true;
+let drawGar = false;
+let frame = 0;
 
 function drawRect(x,y) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -23,32 +24,33 @@ function sand(x,y) {
 const Trap = {
         //key:value pair
         x : 100,
-        y : 200,
-        speed: 3
+        y : 370,
+        speed: 4
 };
 const trash = {
         x : 200,
-        y : 200,
-        speed: 3
+        y : 370,
+        speed: 4
 };
 const shell = {
-        //x : (Math.random() * 340) + 30,
-        //y : (Math.random() * 150) + 50,
-        x : 200,
-        y : 200,
+        x : (Math.random() * 340) + 30,
+        y : (Math.random() * 150) + 150,
+        //x : 200,
+        //y : 200,
         d : 2.9 
 };
 
 const wave = {
         y : 0,
-        x : 0
+        x : 0,
+        speed : 3
 };
 
 const gar = {
-        //x : (Math.random() * 340) + 30,
-        //y : (Math.random() * 150) + 50,
-        x : 300,
-        y : 200,
+        x : (Math.random() * 340) + 30,
+        y : (Math.random() * 150) + 50,
+        //x : 300,
+        //y : 200,
 };
 
 const keys = {};
@@ -129,6 +131,17 @@ function circ(x,y){
     ctx.fill();
 }
 
+function circl(x,y){
+    ctx.strokeStyle = "PowderBlue";                                                     
+    ctx.strokeWidth = 5;
+    ctx.beginPath();
+    ctx.arc(x, y, 100, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = 'PowderBlue';
+    ctx.fill();
+}
+
+
 function bub(x,y){
     ctx.strokeStyle = "black";
     ctx.strokeWidth = 5;
@@ -147,14 +160,18 @@ function bubs(x,y){
 }
 
 function drawwave(){
-    circ(x,y);
-    circ(x+120,y);
-    circ(x+230,y);
-    circ(x+350,y);
-    bubs(x+10,y+60);
-    bubs(x+100,y+60);
-    bubs(x+220,y+60);
-    bubs(x+310,y+60);
+    circ(wave.x,wave.y);
+    circ(wave.x+120,wave.y);
+    circ(wave.x+230,wave.y);
+    circ(wave.x+350,wave.y);
+    circl(wave.x,wave.y-135);
+    circl(wave.x+120,wave.y-135);
+    circl(wave.x+230,wave.y-135);
+    circl(wave.x+350,wave.y-135);
+    bubs(wave.x+10,wave.y+60);
+    bubs(wave.x+100,wave.y+60);
+    bubs(wave.x+220,wave.y+60);
+    bubs(wave.x+310,wave.y+60);
 }
 
 function curve(x,y){
@@ -176,6 +193,7 @@ function lon(x,y,d){
     ctx.fillStyle = 'White';
     ctx.fill();
 }
+
 
 function drawshell(){
     lon(shell.x-10,shell.y-15,shell.d);
@@ -217,32 +235,64 @@ function drawScore(){
 function animate() {
     drawRect(6,100);
     sand(0,0);
-    drawwave(0,0);
-    drawgar();
     drawTrap();
     moveTrap();
     drawtrash();
     movetrash();
-    drawshell();
     checkCollision();
-    drawScore();
     checkColl();
-    wavem();
     if(gameRunning){
-    if(score > 1000){
-        gameRunning = false;
- }
+        if(score > 1000){
+            gameRunning = false;
+        }
         requestAnimationFrame(animate);
+    }
+
+      trash["minX"] = trash.x;
+      trash["minY"] = trash.y;
+      trash["maxX"] = trash.x + 15;
+      trash["maxY"] = trash.y + 10;
+
+     shell ["minX"] = shell.x - 30;
+     shell ["minY"] = shell.y - 40;
+     shell ["maxX"] = shell.x + 10;
+     shell ["maxY"] = shell.y + 5;
+    if (drawShell) {
+        drawshell();
+    }
+
+       Trap["minX"] = Trap.x;
+       Trap["minY"] = Trap.y;
+       Trap["maxX"] = Trap.x + 15;
+       Trap["maxY"] = Trap.y + 10;
+
+      gar ["minX"] = gar.x-20;
+      gar ["minY"] = gar.y-20;
+      gar ["maxX"] = gar.x+80;
+      gar ["maxY"] = gar.y+40;
+
+     if (drawGar) {
+         drawgar();
+     }
+
+     spawn();
+     drawwave(0,0);
+     wavem();
+     drawScore();
 }
-}
+
+
+
+
+
 
  function checkCollision(){
     
-	 wave["minY"] = y;
-     wave["maxY"] = y+50; 
+	 let waveMinY = wave.y - 80;
+     let waveMaxY = wave.y + 90;
 
-     if( Trap.maxY > wave.minY &&
-         Trap.minY < wave.maxY)
+     if( Trap.maxY > waveMinY &&
+         Trap.minY < waveMaxY)
      {
             gameRunning = false;
      }
@@ -263,6 +313,8 @@ function animate() {
 
 }
 
+
+
 function checkColl(){
 
      shell ["minX"] = shell.x - 30;
@@ -280,48 +332,74 @@ function checkColl(){
      if( shell.maxY > Trap.minY &&
          shell.minY < Trap.maxY &&
          shell.maxX > Trap.minX && 
-         shell.minX < Trap.maxX){
+         shell.minX < Trap.maxX && drawShell){
             score++;
+            drawShell = false;
     }
   
       if(shell.maxY > trash.minY &&
          shell.minY < trash.maxY && 
          shell.maxX > trash.minX && 
-         shell.minX < trash.maxX){
-          score++;
+         shell.minX < trash.maxX && drawShell){
+          score--;
+              drawShell = false;
       }
 
      if( gar.maxY > Trap.minY &&
          gar.minY < Trap.maxY &&
          gar.maxX > Trap.minX && 
-         gar.minX < Trap.maxX){
-            score++;
+         gar.minX < Trap.maxX && drawGar){
+            score--;
+             drawGar = false;
     }
   
       if(gar.maxY > trash.minY &&
          gar.minY < trash.maxY && 
          gar.maxX > trash.minX && 
-         gar.minX < trash.maxX){
+         gar.minX < trash.maxX && drawGar){
           score++;
+              drawGar = false;
       }
 
-}
+	}
+
 
 function wavem(){
-        y += .007;
-        wave.top = y + 3;
-        requestAnimationFrame(wavem);
 
+        wave.y += wave.speed;
+        let waveBottom = wave.y + 90;
 
-         if(wave.y > 100)
-                 
-        {
-                console.log("yayay");
-          y -= .007;
-          wave.top = y - 3;
+         if(waveBottom < 0){
+            wave.speed = 2;
          }
+         if (waveBottom > 300){
+            wave.speed = -2;
+         }
+
 }
 
+function spawn(){
+        let waveBottom = wave.y + 90;
+
+          if (
+                  drawGar === false && 
+                  waveBottom > 300){
+            drawGar = true;
+            gar.x = (Math.random() * 340) + 30,
+            gar.y = (Math.random() * 150) + 150
+                  
+          }
+
+          if (
+                  drawShell === false &&
+                  waveBottom > 300){
+            drawShell = true;
+            shell.x = (Math.random() * 340) + 30,
+            shell.y = (Math.random() * 150) + 150
+
+          }
+
+}
 
 function handleKeyPress(e){
         //console.log(e.key);

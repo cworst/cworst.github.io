@@ -12,13 +12,85 @@
             display:block;
             border:1px solid;
             margin:auto;
-            margin-top:50px
+            margin-top:25px
         }
+
+        .sidel1{
+    grid-column-start:1;
+    grid-column-end:4;
+    grid-row-start:1;
+    grid-row-end:12;
+    background-color:LightBlue;
+        border:2px solid SteelBlue;
+    font-size:135%;
+}
+.main{
+    grid-column-start:4;
+    grid-column-end:8;
+    grid-row-start:1;
+    grid-row-end:12;
+    background-color:LightBlue;
+        border:2px solid SteelBlue;
+    font-size:100%;
+}
+.sider{
+    grid-column-start:8;
+    grid-column-end:11;
+    grid-row-start:1;
+    grid-row-end:12;
+    background-color:LightBlue;
+    border:2px solid SteelBlue;
+    font-size:100%;
+
+}
+.grid{
+        display:grid;
+        grid-template-rows:repeat(11,1fr);
+        grid-template-columns:repeat(10,1fr);
+        height:80vh;
+        text-align:center;
+        gap:10px;
+}
+
+button{
+        border:2px solid SteelBlue;
+        background-color:LightBlue;
+        font-size:140%;
+        margin-top:100px;
+
+}
     </style>
 
 </head>
 <body>
+<div class = "grid">
+
+        <div class = "sidel1">
+            <h1>Beach Clean Up!</h1>
+            <ul>
+                <li>The objective of the game is picking up trash and seashells that wash up on shore</li>
+                <li>Use the RED trash can to pick up the garbage (gray rectangle thing)</li>
+                <li>Use the BLUE trash can to pick up seashells to collect them!</li>
+                <li>If you use the wrong trashcan to pick up the wrong items a point is subtracted from your score</li>
+                <li>Use WASD to control the RED trash can</li>
+                <li>Use the ARROW KEYS to control the BLUE trash can</li>
+             </ul>
+        </div>
+
+<div class = "main">
+    <div class = "sider" style="border: unset;">
         <canvas id="myCanvas" width="400" height="400"></canvas>
-        <script src="game.js"></script>
+        </div>
+     </div>
+
+<div class = "sider">
+        
+        <button type="button" id="butt">RESET</button>
+        <br>
+        <p>(Click Twice!)</p>
+</div>
+
+ <script src="game.js"></script> 
+</div>
 </body>
 

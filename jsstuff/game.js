@@ -10,6 +10,25 @@ let drawShell = true;
 let drawGar = false;
 let frame = 0;
 
+
+function reset(){
+score = 0;
+drawShell = true;
+        drawGar = true;
+        frame = 0;
+          Trap.x = 100;
+          Trap.y = 370;
+          trash.x = 200;
+          trash.y = 370;
+
+if (!gameRunning) {
+gameRunning = true;
+animate();
+}
+
+}
+
+
 function drawRect(x,y) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'SteelBlue';
@@ -414,5 +433,6 @@ document.addEventListener('keyup', (e) => {
         keys[e.key] = false;
 });
 
+document.getElementById("butt").addEventListener("click", reset);
 
 animate();

@@ -313,6 +313,7 @@ function animate() {
      if( Trap.maxY > waveMinY &&
          Trap.minY < waveMaxY)
      {
+             console.log("yysy");
             gameRunning = false;
      }
 
@@ -326,7 +327,9 @@ function animate() {
       Trap["maxX"] = Trap.x + 15;
       Trap["maxY"] = Trap.y + 10;
 
-      if(wave.maxY > trash.minY && wave.minY < trash.maxY){
+      if(waveMaxY > trash.minY && 
+         waveMinY < trash.maxY){
+              console.log("working??");
           gameRunning = false;
       }
 

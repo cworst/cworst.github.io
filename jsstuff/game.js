@@ -20,6 +20,7 @@ drawShell = true;
           Trap.y = 370;
           trash.x = 200;
           trash.y = 370;
+        wave.y = 0;
 
 if (!gameRunning) {
 gameRunning = true;

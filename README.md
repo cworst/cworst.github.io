@@ -1,17 +1,10 @@
-# cworst.github.io
-i dont know what is going on 
+Hello! I am a student at Arlington Tech. I have started this repo in freshman year for a Web Design class.
 
-hopefully this works and doesnt delete my whole document
+Here is a link to my website:
+- [Website](https://cworst.github.io/)
 
-
-# this is amazing
-
-testing but preppy
-
-## I like owls and Lucy Van Pelt from Peanuts
-
-shes an icon of mine, some reasons are:
-
-*shes real
-*I really understand her
-*shes my inner thoughts
+My website includes:
+*My Projects
+*My Interests
+*My Certification
+*My Journal For Class

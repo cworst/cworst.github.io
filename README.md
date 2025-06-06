@@ -4,7 +4,7 @@ Here is a link to my website:
 - [Website](https://cworst.github.io/)
 
 My website includes:
-*My Projects
-*My Interests
-*My Certification
-*My Journal For Class
+- My Projects
+- My Interests
+- My Certification
+- My Journal For Class

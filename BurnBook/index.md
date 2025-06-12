@@ -31,3 +31,6 @@ I am learning how to write in here for the first time
 
 ## Game Concept
 - [Game](entries/game.md)
+
+## Ai game reflection
+- [AI game](entries/aireflection.md)

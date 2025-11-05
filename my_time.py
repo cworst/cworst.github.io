@@ -5,7 +5,10 @@ class Time:
         self.seconds = seconds
 
     def __str__(self):
-        if len(self.seconds) == 1:
-            "0" + str(self.seconds) = self.seconds
-        return (str(self.hours) + ":" + str(self.minutes) + ":" + str(self.seconds))
+        if len(str(self.seconds)) == 1:
+            sec = "0" + str(self.seconds)
+        else:
+            sec = str(self.seconds)
+
+        return (str(self.hours) + ":" + str(self.minutes) + ":" + sec )
 
